@@ -1,0 +1,35 @@
+,
+
+{
+
+    "Sid": "AllowGitHubActionsRole",
+
+    "Effect": "Allow",
+
+    "Principal": {
+
+    "AWS": "arn:aws:iam::<YOUR_ACCT_NUM>:role/<YOUR_ROLE_NAME>"
+
+    },
+
+    "Action": [
+
+        "s3:PutObject",
+
+        "s3:GetObject",
+
+        "s3:DeleteObject",
+
+        "s3:ListBucket"
+
+    ],
+
+    "Resource": [
+
+        "arn:aws:s3:::<YOUR_S3_BUCKET>",
+
+        "arn:aws:s3:::<YOUR_S3_BUCKET>/*"
+
+    ]
+
+}
